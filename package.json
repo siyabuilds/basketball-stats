@@ -1,0 +1,39 @@
+{
+  "name": "basketball-stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siyabuilds/basketball-stats.git"
+  },
+  "author": {
+    "name": "Siyabonga Lukhele",
+    "url": "https://samsonlukhele.me"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "api",
+    "basketball",
+    "stats"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/siyabuilds/basketball-stats/issues"
+  },
+  "homepage": "https://github.com/siyabuilds/basketball-stats#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.2"
+  }
+}
