@@ -12,16 +12,19 @@ model Player {
   firstName String
   lastName String
   position String
-  team String
+  teamId Int
+  team Team @relation(fields: [teamId], references: [id])
 }
 
 model Game {
   id Int @id @default(autoincrement())
   date DateTime
-  homeTeam String
-  awayTeam String
   homeScore Int
   awayScore Int
+  homeTeamId Int
+  awayTeamId Int
+  homeTeam Team @relation("HomeGames", fields: [homeTeamId], references: [id])
+  awayTeam Team @relation("AwayGames", fields: [awayTeamId], references: [id])
 }
 
 model Team {
@@ -30,4 +33,7 @@ model Team {
   city String
   coach String
   captain String
+  players Player[]
+  homeGames Game[] @relation("HomeGames")
+  awayGames Game[] @relation("AwayGames")
 }
